@@ -1,0 +1,172 @@
+.global__nav {
+    background: rgba(0,0,0,0.8);
+
+    .big__nav {
+        display: none;
+    }
+
+    .center {
+        margin: 0 auto;
+        padding-left: 22px;
+        padding-right: 22px;
+        font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+        
+        .container {
+            align-items: center;
+            padding-inline-start: 0px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin: 0;
+
+            .burger {
+                height: 17px;
+                cursor: pointer;
+            }
+
+            .span__relative {
+                position: absolute;
+                width: 15px;
+                height: 1px;
+                background-color: #f5f5f7;
+                left:20px;
+            }
+
+            .apple__logo {
+                background-image: url("../../public/globalnav_apple_image__b5er5ngrzxqq_large.png");
+                background-repeat: no-repeat;
+            }
+
+            .basket__logo {
+                background-image: url("../../public/ezgif.com-gif-maker.png");
+                background-repeat: no-repeat;
+            }
+
+            .logo {
+                display: grid;
+                align-items: center;
+                width: 14px;
+                height: 44px;
+                line-height: 0;
+            }
+
+            li {
+                opacity: .8;
+                color: #f5f5f7;
+                list-style: none;
+
+                a {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    line-height: 0;
+                }
+            }
+
+            li:hover {
+                opacity: 1;
+                transition-duration: 0.3s;
+            }
+
+        }
+    }
+
+    @media (min-width: 833px) {
+        .big__nav {
+            display: grid;
+            max-width: 1050px;
+
+            li {
+                font-size: 12px;
+                display: grid;
+            }
+        }
+
+        .search__logo {
+            background-image: url("../../public/globalnav_search_image__cbllq1gkias2_large.png");
+            background-repeat: no-repeat;
+        }
+
+        .little__nav {
+            display: none;
+        }
+    }
+
+}
+
+.burger__noanimation {
+    .span__relative:nth-child(1) {
+        top: 16px;
+    }
+    .span__relative:nth-child(2) {
+        top: 24px;
+    }
+
+}
+
+
+.burger__invaniamtion {
+    .span__relative:nth-child(1) {
+        top: 16px;
+        animation: invani_frst 0.5s 1;
+    }
+    .span__relative:nth-child(2) {
+        top: 24px;
+        animation: invani_scdn 0.5s 1;
+    }
+
+    @keyframes invani_frst {
+        0% {
+            top: 20px;
+            transform: rotate(44deg);
+        }
+        20% {
+            transform: rotate(0deg);
+        }
+
+    }
+    @keyframes invani_scdn {
+        0% {
+            top: 20px;
+            transform: rotate(-44deg);
+        }
+        20% {
+            transform: rotate(0deg);
+        }
+    }
+
+}
+
+
+.burger__animation {
+    .span__relative:nth-child(1) {
+        animation: ani_frst 0.5s 1;
+        top: 20px;
+        transform: rotate(-44deg);
+    }
+    .span__relative:nth-child(2) {
+        animation: ani_scdn 0.5s  1;
+        top: 20px;
+        transform: rotate(44deg);
+    }
+
+    @keyframes ani_frst {
+        0% {
+            top: 16px;
+            transform: rotate(0deg);
+        }
+        20% {
+            top: 20px;
+        }
+    }
+
+    @keyframes ani_scdn {
+        0% {
+            top: 24px;
+            transform: rotate(0deg);
+        }
+        20% {
+            top: 20px;
+        }
+    }
+
+}
