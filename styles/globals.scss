@@ -1,4 +1,6 @@
 @import 'layout/header.scss';
+@import 'components/input.scss';
+
 
 html,
 body {
@@ -22,7 +24,12 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
     background: black;
+    color: white;
   }
+}
+
+.co {
+  height: 100vh;
+  background-color: green;
 }

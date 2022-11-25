@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillApple } from "react-icons/ai";
 import { HiOutlineSearch } from "react-icons/hi";
+import ModalBurger from "./modal";
 
 const navigation = [
   { name: "Store", href: "/store" },
@@ -9,10 +10,10 @@ const navigation = [
   { name: "iPhone", href: "/iphone" },
   { name: "Watch", href: "/watch" },
   { name: "AirPods", href: "/airpod" },
-  { name: "Tv & Maison", href: "/tb-home" },
-  { name: "Exclusivités Apple", href: "/services" },
-  { name: "Accessoires", href: "/accessories" },
-  { name: "Assistance", href: "/support" },
+  { name: "Tv & Home", href: "/tb-home" },
+  { name: "Only on Apple", href: "/services" },
+  { name: "Accessorie", href: "/accessories" },
+  { name: "Support", href: "/support" },
 ];
 
 export default function Header() {
@@ -27,7 +28,16 @@ export default function Header() {
   }, [burger]);
 
   return (
-    <div className="global__nav">
+    <div
+      className={
+        burger === 1
+          ? "global__nav_open"
+          : burger === 2
+          ? "global__nav_close"
+          : "global__nav"
+      }
+    >
+      <ModalBurger Status={burger} />
       <div className="center big__nav">
         <ul className="container">
           <li>
@@ -78,7 +88,7 @@ export default function Header() {
             <a className="logo apple__logo" href={""}></a>
           </li>
           <li>
-            <a className="logo basket__logo" href={""}></a>
+            <a className={burger != 1 ? "logo basket__logo" : ""} href={""}></a>
           </li>
         </ul>
       </div>

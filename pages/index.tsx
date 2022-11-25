@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="shortcut icon" href="favicon.ico" />
       </Head>
       <Layout>
-        <></>
+        <div className="co"></div>
       </Layout>
     </>
   );
