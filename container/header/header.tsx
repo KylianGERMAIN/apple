@@ -1,7 +1,7 @@
 import React from "react";
 import { AiFillApple } from "react-icons/ai";
 import { HiOutlineSearch } from "react-icons/hi";
-import ModalBurger from "./modal";
+import { ModalBurger, ModalBag } from "./modal";
 
 const navigation = [
   { name: "Store", href: "/store" },
@@ -18,6 +18,7 @@ const navigation = [
 
 export default function Header() {
   const [burger, setBurger] = React.useState(0);
+  const [bag, setBag] = React.useState(false);
 
   React.useEffect(() => {
     window.addEventListener("resize", () => {
@@ -54,7 +55,14 @@ export default function Header() {
             <a className="logo search__logo" href={""}></a>
           </li>
           <li>
-            <a className="logo basket__logo" href={""}></a>
+            <a
+              className="logo basket__logo"
+              onClick={() => {
+                setBag(!bag);
+              }}
+            ></a>
+            {bag == false ? null : <span className="basket-arrow"></span>}
+            <ModalBag Status={bag} />
           </li>
         </ul>
       </div>
@@ -63,13 +71,6 @@ export default function Header() {
         <ul className="container">
           <li>
             <a
-              className={
-                burger == 0
-                  ? "burger__noanimation burger"
-                  : burger == 1
-                  ? "burger__animation burger"
-                  : "burger__invaniamtion burger"
-              }
               onClick={() => {
                 if (burger == 0 || burger == 2) setBurger(1);
                 else {
@@ -79,6 +80,13 @@ export default function Header() {
                   }, 500);
                 }
               }}
+              className={
+                burger == 0
+                  ? "burger__noanimation burger"
+                  : burger == 1
+                  ? "burger__animation burger"
+                  : "burger__invaniamtion burger"
+              }
             >
               <span className="span__relative"></span>
               <span className="span__relative"></span>
@@ -88,7 +96,14 @@ export default function Header() {
             <a className="logo apple__logo" href={""}></a>
           </li>
           <li>
-            <a className={burger != 1 ? "logo basket__logo" : ""} href={""}></a>
+            <a
+              className="logo basket__logo"
+              onClick={() => {
+                setBag(!bag);
+              }}
+            ></a>
+            {bag == false ? null : <span className="basket-arrow"></span>}
+            <ModalBag Status={bag} />
           </li>
         </ul>
       </div>
