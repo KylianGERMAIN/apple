@@ -43,3 +43,46 @@
 
     }
 }
+
+
+
+.input_blue:nth-child(2) {
+    margin-left: 35px;
+}
+
+.container_input {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+  
+.input_bluel {
+    cursor: pointer;
+    color: #06c;
+}
+
+.arrow_bluel {
+    cursor: pointer;
+    color: #06c;
+}
+
+.input_bluel:hover {
+    border-bottom: 2px solid #06c;
+}
+
+
+.input_blue {
+    cursor: pointer;
+    color: #2997ff;
+}
+
+.arrow_blue {
+    cursor: pointer;
+    color: #2997ff;
+}
+
+.input_blue:hover {
+    border-bottom: 2px solid #2997ff;
+}
+

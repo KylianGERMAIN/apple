@@ -1,11 +1,14 @@
 @import 'layout/header.scss';
 @import 'components/input.scss';
+@import 'pages/home.scss';
+@import 'layout/footer.scss';
 
 
 html,
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -27,9 +30,4 @@ a {
     background: black;
     color: white;
   }
-}
-
-.co {
-  height: 100vh;
-  background-color: green;
 }

@@ -2,21 +2,26 @@
 
 .global__nav_close {
     position: fixed;
+    z-index: 9999;
     width: 100%;
 }
 
 
 .global__nav_open {
     position: fixed;
+    z-index: 9999;
     width: 100%;
     background: rgba(0,0,0,0);
+    backdrop-filter: blur(10px);
 }
 
 
 .global__nav {
     position: fixed;
+    z-index: 9999;
     width: 100%;
     background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
 }
 
 .center {
@@ -309,7 +314,7 @@
     width: 100vw;
     font-size: 15px;
     height: 313px;
-    background-color: white;
+    background-color: white;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     
     .empty__bag {
         padding: 35px 0 23px;
@@ -324,6 +329,7 @@
         color: #06c;
         
         .ul_ul > li > a {
+            cursor: pointer;
             color: #06c !important;
             line-height: 44px;
             width: 100%;
